@@ -1,3 +1,9 @@
+# app/config.config.yml
+
+sonata_admin:
+  title: Acme Demo Bundle
+  
+
 sonata_block:
     default_contexts: [cms]
     blocks:
@@ -10,6 +16,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: @AcmeDemoBundle/Resources/config/admin.yml }
 
 framework:
     translator: { fallback: en }

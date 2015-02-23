@@ -1,0 +1,21 @@
+Acme\DemoBundle\Entity\User:
+  type: entity
+  table: user
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  
+  oneToMany:
+    posts:
+      targetEntity: Post
+      mappedBy: user
+  
+  fields:
+    firstname:
+      type: string
+      length: 45
+    lastname:
+      type: string
+      length: 45

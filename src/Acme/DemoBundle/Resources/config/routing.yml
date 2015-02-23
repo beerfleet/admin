@@ -1,3 +1,7 @@
+acme_demo_user:
+    resource: "@AcmeDemoBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
 _welcome:
     pattern:  /
     defaults: { _controller: AcmeDemoBundle:Welcome:index }

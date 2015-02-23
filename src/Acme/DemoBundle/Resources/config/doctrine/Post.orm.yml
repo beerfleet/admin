@@ -1,0 +1,23 @@
+Acme\DemoBundle\Entity\Post:
+  type: entity
+  table: post
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+        
+  manyToOne:
+    user:
+      targetEntity: User
+      inversedBy: posts
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
+        
+  fields:
+    title:
+      type: string
+      length: 45
+    body:
+      type: text

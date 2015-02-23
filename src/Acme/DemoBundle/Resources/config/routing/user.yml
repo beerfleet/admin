@@ -1,0 +1,30 @@
+user:
+    path:     /
+    defaults: { _controller: "AcmeDemoBundle:User:index" }
+
+user_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeDemoBundle:User:show" }
+
+user_new:
+    path:     /new
+    defaults: { _controller: "AcmeDemoBundle:User:new" }
+
+user_create:
+    path:     /create
+    defaults: { _controller: "AcmeDemoBundle:User:create" }
+    methods:  POST
+
+user_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeDemoBundle:User:edit" }
+
+user_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeDemoBundle:User:update" }
+    methods:  [POST, PUT]
+
+user_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeDemoBundle:User:delete" }
+    methods:  [POST, DELETE]
