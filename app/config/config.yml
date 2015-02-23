@@ -1,9 +1,18 @@
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # Enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        # Your other blocks
+  
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
 
 framework:
+    translator: { fallback: en }
     #esi:             ~
     #translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
@@ -34,7 +43,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ jvbAdminBundle ]
+    bundles:        [ jvbAdminBundle, SonataCoreBundle, SonataAdminBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

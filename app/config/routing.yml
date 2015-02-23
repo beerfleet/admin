@@ -1,6 +1,3 @@
 jvb_admin:
     resource: "@jvbAdminBundle/Resources/config/routing.yml"
     prefix:   /
-
-
-
