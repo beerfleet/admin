@@ -1,0 +1,14 @@
+{% block title %} MIJN EIGEN TITEL {% endblock %}
+
+{% block stylesheets %}
+    
+{% endblock %}
+
+{% block body %}
+    <h1>Toon Alle Producten</h1>
+    <ul>
+    {% for product in producten %}
+        <li>{{ product.id }} - {{ product.naam }}</li>
+    {% endfor%}
+    </ul>
+{% endblock %}

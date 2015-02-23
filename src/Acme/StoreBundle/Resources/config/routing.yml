@@ -1,0 +1,31 @@
+add_product:
+    path: /store
+    defaults: { _controller: AcmeStoreBundle:Default:create }
+
+test_product:
+    path: /test
+    defaults: { _controller: AcmeStoreBundle:Default:test }
+    
+update_product:
+   path: /update
+   defaults: { _controller: AcmeStoreBundle:Default:update }
+   
+toon_product:
+    path: /toon
+    defaults: { _controller: AcmeStoreBundle:Default:toon }
+    
+toon_alle:
+    path: /toon_alle
+    defaults: { _controller: AcmeStoreBundle:Default:toon_alle }
+
+toon_product:
+    path: /toon_prod
+    defaults: { _controller: AcmeStoreBundle:Default:toon_product }
+    
+sorteer_naam:
+    path: /sorteer
+    defaults: { _controller: AcmeStoreBundle:Default:sorteer_naam }
+    
+vind_join:
+    path: /vind_join
+    defaults: { _controller: AcmeStoreBundle:Default:vind_join }
