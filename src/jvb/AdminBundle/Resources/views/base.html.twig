@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      {% block title %}
+        ADMIN TEST
+      {% endblock title %}
+    </title>
+
+    {% stylesheets 'bundles/jvbadmin/css/bootstrap.min.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    
+    {% stylesheets 'bundles/jvbadmin/css/bootstrap-theme.min.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {% stylesheets 'bundles/jvbadmin/css/style.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {% block extracss %}
+    {% endblock extracss %}
+  </head>
+
+  <body>
+    <div class="wrapper">
+      {% block content %}
+
+      {% endblock content %}
+    </div>
+
+    {% javascripts '@jvbAdminBundle/Resources/public/js/jquery-2.1.3.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    
+    {% javascripts '@jvbAdminBundle/Resources/public/js/bootstrap.min.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% block extrajs %}
+    {% endblock extrajs %}
+  </body>
+</html>
